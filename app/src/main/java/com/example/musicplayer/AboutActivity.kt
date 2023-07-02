@@ -1,10 +1,8 @@
-package com.harshRajpurohit.musicPlayer
+package com.example.musicplayer
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.musicplayer.MainActivity
 import com.example.musicplayer.databinding.ActivityAboutBinding
-import com.harshRajpurohit.musicPlayer.databinding.ActivityAboutBinding
 
 class AboutActivity : AppCompatActivity() {
 
@@ -18,8 +16,9 @@ class AboutActivity : AppCompatActivity() {
         supportActionBar?.title = "About"
         binding.aboutText.text = aboutText()
     }
-    private fun aboutText(): String{
-        return "Developed By: Harsh H. Rajpurohit" +
-                "\n\nIf you want to provide feedback, I will love to hear that."
+
+    private fun aboutText(): String {
+        return "Developed By: Chetna Mishra" +
+                "\n\nIf you want to provide any feedback, I would love to hear that."
     }
 }

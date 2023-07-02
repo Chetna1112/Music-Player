@@ -1,16 +1,15 @@
-package com.harshRajpurohit.musicPlayer
+package com.example.musicplayer
 
+//import com.example.musicplayer.viewbinding.ActivityFavouriteBinding
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.musicplayer.FavouriteAdapter
-import com.example.musicplayer.MainActivity
-import com.example.musicplayer.Music
-import com.example.musicplayer.PlayerActivity
 import com.example.musicplayer.databinding.ActivityFavouriteBinding
+import com.harshRajpurohit.musicPlayer.Music
+import com.harshRajpurohit.musicPlayer.checkPlaylist
 
 
 class FavouriteActivity : AppCompatActivity() {
@@ -40,7 +39,7 @@ class FavouriteActivity : AppCompatActivity() {
 
         if(favouriteSongs.size < 1) binding.shuffleBtnFA.visibility = View.INVISIBLE
 
-        if(favouriteSongs.isNotEmpty()) binding.instructionFV.visibility = View.GONE
+
 
         binding.shuffleBtnFA.setOnClickListener {
             val intent = Intent(this, PlayerActivity::class.java)

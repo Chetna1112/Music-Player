@@ -38,19 +38,6 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/instructionPN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/play_next_note"
-        android:textSize="20sp"
-        android:padding="16dp"
-        android:gravity="center"
-        android:textColor="?attr/dialogBtnBackground"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/playNextRV"

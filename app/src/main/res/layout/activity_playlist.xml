@@ -7,29 +7,26 @@
     tools:context=".PlaylistActivity"
     >
 
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/cool_pink"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="?attr/themeColor"
         android:layout_marginTop="2dp">
 
         <ImageButton
             android:id="@+id/backBtnPLA"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:backgroundTint="@android:color/transparent"
-            android:contentDescription="@string/back_btn"
             android:src="@drawable/back_icon"
+            android:contentDescription="@string/back_btn"
+            android:backgroundTint="@android:color/transparent"
             app:tint="@color/white"
-            android:padding="5dp">
-
-        </ImageButton>
+            android:padding="5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -39,12 +36,9 @@
             android:text="@string/playlist_btn"
             android:textColor="@color/white"
             android:textSize="25sp"
-            android:textStyle="bold">
-
-        </TextView>
-
-
+            android:textStyle="bold" />
     </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/playlistRV"
         android:layout_width="match_parent"

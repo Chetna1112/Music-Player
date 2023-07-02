@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.musicplayer.databinding.FragmentNowPlayingBinding
+import com.harshRajpurohit.musicPlayer.setSongPosition
 
 class NowPlaying : Fragment() {
 
@@ -33,13 +34,13 @@ class NowPlaying : Fragment() {
             PlayerActivity.musicService!!.createMediaPlayer()
 
             Glide.with(this)
-                .load(PlayerActivity.musicList[PlayerActivity.songPosition].artUri)
+                .load(PlayerActivity.musicListPA[PlayerActivity.songPosition].artUri)
                 .apply(
                     RequestOptions().placeholder(R.drawable.muisc_player_icon_splash_screen)
                         .centerCrop()
                 )
                 .into(binding.songImgNP)
-            binding.songNameNP.text = PlayerActivity.musicList[PlayerActivity.songPosition].title
+            binding.songNameNP.text = PlayerActivity.musicListPA[PlayerActivity.songPosition].title
             PlayerActivity.musicService!!.showNotification(R.drawable.pause_icon)
             playMusic()
         }
@@ -58,13 +59,13 @@ class NowPlaying : Fragment() {
             binding.root.visibility = View.VISIBLE
             binding.songNameNP.isSelected =true
             Glide.with(this)
-                .load(PlayerActivity.musicList[PlayerActivity.songPosition].artUri)
+                .load(PlayerActivity.musicListPA[PlayerActivity.songPosition].artUri)
                 .apply(
                     RequestOptions().placeholder(R.drawable.muisc_player_icon_splash_screen)
                         .centerCrop()
                 )
                 .into(binding.songImgNP)
-            binding.songNameNP.text = PlayerActivity.musicList[PlayerActivity.songPosition].title
+            binding.songNameNP.text = PlayerActivity.musicListPA[PlayerActivity.songPosition].title
             if (PlayerActivity.isPlaying)
                 binding.playPauseBtnNP.setIconResource(R.drawable.pause_icon)
             else

@@ -5,45 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FavouriteActivity"
-    >
+    >    <LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="?attr/themeColor"
+    android:layout_marginTop="2dp">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ImageButton
+        android:id="@+id/backBtnFA"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:src="@drawable/back_icon"
+        android:contentDescription="@string/back_btn"
+        android:backgroundTint="@android:color/transparent"
+        app:tint="@color/white"
+        android:padding="5dp"/>
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/cool_pink"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="2dp">
-
-        <ImageButton
-            android:id="@+id/backBtnFA"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:backgroundTint="@android:color/transparent"
-            android:contentDescription="@string/back_btn"
-            android:src="@drawable/back_icon"
-            app:tint="@color/white"
-            android:padding="5dp">
-
-        </ImageButton>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/favourites_btn"
-            android:gravity="center"
-            android:text="@string/favourites_btn"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold">
-
-        </TextView>
-
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:contentDescription="@string/favourites_btn"
+        android:gravity="center"
+        android:text="@string/favourites_btn"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+</LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/favouriteRV"
         android:layout_width="match_parent"
@@ -59,6 +51,7 @@
     </androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/shuffleBtnFA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"

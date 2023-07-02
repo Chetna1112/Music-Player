@@ -1,11 +1,35 @@
 package com.example.musicplayer
 
-import androidx.appcompat.app.AppCompatActivity
+//import com.example.musicplayer.daActivityPlayNextBinding
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.musicplayer.databinding.ActivityPlayNextBinding
+//import com.harshRajpurohit.musicPlayer.FavouriteAdapter
+import com.harshRajpurohit.musicPlayer.Music
 
 class PlayNext : AppCompatActivity() {
+
+    companion object{
+        var playNextList: ArrayList<Music> = ArrayList()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_play_next)
+        setTheme(MainActivity.currentTheme[MainActivity.themeIndex])
+        val binding = ActivityPlayNextBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.playNextRV.setHasFixedSize(true)
+        binding.playNextRV.setItemViewCacheSize(13)
+        binding.playNextRV.layoutManager = GridLayoutManager(this, 4)
+        binding.playNextRV.adapter = FavouriteAdapter(this, playNextList, playNext = true)
+
+
+
+        binding.backBtnPN.setOnClickListener {
+            finish()
+        }
     }
+
 }
