@@ -25,7 +25,7 @@
         app:iconTint="@color/white"
         android:backgroundTint="@color/cool_pink"
         android:layout_centerVertical="true"
-        app:iconSize="35dp"
+        app:iconSize="40dp"
         android:layout_marginEnd="10dp"/>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -36,7 +36,7 @@
         app:iconTint="@color/white"
         android:backgroundTint="@color/cool_pink"
         android:layout_centerVertical="true"
-        app:iconSize="35dp"
+        app:iconSize="40dp"
         android:layout_toStartOf="@id/nextBtnNP"
         android:layout_marginHorizontal="5dp"/>
     <TextView
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="@string/song_name"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:gravity="center"
