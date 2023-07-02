@@ -1,4 +1,4 @@
-# MusicPlayer
+# MP3
 
 
 <b>A Simple Music PLayer App which requests storage permission and displays all the songs available in the storage..</b></br>
