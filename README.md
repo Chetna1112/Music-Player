@@ -2,8 +2,7 @@
 
 
 <b>A Simple Music PLayer App which requests storage permission and displays all the songs available in the storage..</b></br>
-[Download APK](C:\Users\nages\Downloads\MusicPlayer2\app\build\outputs\apk\debug)
-
+[Download APK](https://github.com/Chetna1112/Music-Player/blob/60bd6604a7dbd331620c10125ccff0b58cc756e1/apk/MP3.apk)
 <b>Some Of Its Features👇 : </b>
 <ul>
 <li>Functions like play, pause, next, previous, shuffle, repeat, share and back can be performed.
